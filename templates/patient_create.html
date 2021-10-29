@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <head>
+        <title>Create a New Patient</title>
+    </head>
+
+    <body>
+        <a href ="{% url 'patient-list' %}">Go back to Patients</a>
+        <hr></hr>
+        <br><br>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br><br>
+            <button type="submit" style="background-color: blue; padding: 10px; border-radius: 10px; color: #fff;">Submit</button>
+        </form>
+
+    </body>
+</html>
+{% endblock content %}

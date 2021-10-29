@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+    <head>
+        <title>Update Patient for {{ patient.first_name }} - {{ patient.last_name }}</title>
+    </head>
+
+    <body>
+        <a href ="{% url 'detail' patient.pk %}">Go back</a>
+        <br><br>
+        <hr></hr>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br><br>
+            <button type="submit" style="background-color: blue; padding: 10px; border-radius: 10px; color: #fff;">Submit</button>
+        </form>
+
+    </body>
+</html>
+{% endblock content %}

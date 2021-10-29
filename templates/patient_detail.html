@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="text-gray-600 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <div class="lg:w-1s w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">PATIENT</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">{{patient.first_name}} {{patient.last_name}}</h1>
+          <div class="flex mb-4">
+            <a href="{% url 'detail' patient.pk %}" class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">Overview</a>
+            <a href="{% url 'update' patient.pk %}" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Update Details</a>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Age</span>
+            <span class="ml-auto text-gray-900">{{ patient.age }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Anaemia</span>
+            <span class="ml-auto text-gray-900">{{ patient.anaemia }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Ejection Fraction</span>
+            <span class="ml-auto text-gray-900">{{ patient.ejection_fraction }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Acreatinine Phosphokinasege</span>
+            <span class="ml-auto text-gray-900">{{ patient.creatinine_phosphokinase }}</span>
+          </div>
+           <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Diabetes</span>
+            <span class="ml-auto text-gray-900">{{ patient.diabetes }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">High Blood Pressure</span>
+            <span class="ml-auto text-gray-900">{{ patient.high_blood_pressure }}</span>
+          </div>
+           <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Platelets</span>
+            <span class="ml-auto text-gray-900">{{ patient.platelets }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Serum Creatinine</span>
+            <span class="ml-auto text-gray-900">{{ patient.serum_creatinine }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Serum Sodium</span>
+            <span class="ml-auto text-gray-900">{{ patient.serum_sodium }}</span>
+          </div>
+          <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Sex</span>
+            <span class="ml-auto text-gray-900">{{ patient.sex }}</span>
+          </div>
+            <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Smoking</span>
+            <span class="ml-auto text-gray-900">{{ patient.smoking }}</span>
+          </div>
+            <div class="flex border-t border-gray-200 py-2">
+            <span class="text-gray-500">Time</span>
+            <span class="ml-auto text-gray-900">{{ patient.time }}</span>
+          </div>
+
+             <br>
+              <br>
+          <div class="flex">
+
+            <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Get Analysis</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock content %}
